@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
       printf("\n %d ", num );
       printf("\t");
       tobin(num);
+      printf("\t");
+      printf("%04x", num);
       printf("\n");
       cnt ++;
     }
