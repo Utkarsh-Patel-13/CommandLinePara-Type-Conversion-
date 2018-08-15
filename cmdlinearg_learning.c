@@ -4,27 +4,28 @@
 #include <string.h>
 #include <math.h>
 
-int charcheck(char[]); // A function to check if the input string is a number or not
-int toint(char []); // A function to convert string to equivalent integer number
-void tobin(int); // A function to convert provided integer to binary equivalent
+int char_check(char[]); // A function to check if the input string is a number or not
+int to_int(char []); // A function to convert string to equivalent integer number
+void to_bin(int); // A function to convert provided integer to binary equivalent
 
 int main(int argc, char *argv[])
 {
 
-  int chrchk, intnum, arr[16], cnt = 0;
+  int intnum, arr[16], cnt = 0;
 
 
   for(int i = 1 ; i < argc ; i++)
   {
 
-    chrchk = charcheck(argv[i]);
-
-    if(chrchk == 1)
+    if(char_check(argv[i]))
     {
-      int num = toint(argv[i]);
+      int num = to_int(argv[i]);
+      
       printf("\n %d ", num );
       printf("\t");
-      tobin(num);
+      
+      to_bin(num);
+      
       printf("\t");
       printf("%04x", num);
       printf("\n");
@@ -32,7 +33,7 @@ int main(int argc, char *argv[])
     }
 
   }
-  if(cnt == 0 )
+  if(cnt==0)
   {
     printf("\n No numerical characters !! \n" );
   }
@@ -40,7 +41,7 @@ int main(int argc, char *argv[])
   return 0;
 }
 
-int charcheck(char str[])
+int char_check(char str[])
 {
   int count = 0, len = strlen(str);
 
@@ -49,14 +50,14 @@ int charcheck(char str[])
     if(str[i] >= 48 && str[i] <= 57)
     count++;
   }
-  if(count == len)
+  if(count==len)
   return 1;
   else
   return 0;
 
 }
 
-int toint(char str[])
+int to_int(char str[])
 {
   int num = 0, len = strlen(str);
 
@@ -68,7 +69,7 @@ int toint(char str[])
   return num;
 }
 
-void tobin(int num)
+void to_bin(int num)
 {
   int j, arr[16], i=0;
 
