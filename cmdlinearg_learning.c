@@ -54,10 +54,9 @@ int is_digit(char str[])
     if(str[i] >= 48 && str[i] <= 57)
     count++;
   }
-  if(count == len)
-  {
-    return 1;
-  }
+  
+  if( return count == len)
+  
   else
   {
     return 0;
