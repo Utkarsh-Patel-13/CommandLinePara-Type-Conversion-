@@ -8,7 +8,7 @@ int is_digit(char[]); // A function to check if the input string is a number or 
 int to_int(char []); // A function to convert string to equivalent integer number
 void to_bin(int); // A function to convert provided integer to binary equivalent
 void to_hex(int); //A function to convert provided integer to hexadecimal equivalent
-
+void print_arr(int , int []}
 
 int main(int argc, char *argv[])
 {
@@ -90,10 +90,8 @@ void to_bin(int num)
     num = num/2;
     i++;
   }
-  for(j = i-1 ; j >= 0 ; j--)
-  {
-    printf("%d", arr[j] );
-  }
+  
+  print_arr(i, arr);
 
 }
 
@@ -118,8 +116,17 @@ void to_hex(int num)
     i++;
   }
 
+  print_arr(i, arr);
+}
+
+void print_arr(int i, int arr[] )
+{
+
+  int j;
+
   for(int j=i-1 ; j>=0 ; j--)
   {
     printf("%c", arr[j]);
   }
+
 }
