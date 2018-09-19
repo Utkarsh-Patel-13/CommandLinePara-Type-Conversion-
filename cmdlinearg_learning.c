@@ -81,8 +81,10 @@ void to_bin(int num)
   int j, arr[16], i=0;
 
   for( j = 0 ; j < 16 ; j++)
-  arr[j]= 0;
-
+  {
+    arr[j]= 0;
+  }
+  
   while(num > 0)
   {
     arr[i] = num%2;
